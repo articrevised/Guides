@@ -1,0 +1,70 @@
+Artic's Guide To Destroying RAT's And Securing Your Data :D
+Description:This guide is for finding RAT's and how to remove them, what to do if you have been doxed, and how to secure your data and restore privacy on the internet!
+
+RAT definition: Remote Administration Tool, or! Remote Access Trojan, something a attacker uses to take control of your computer when you aren't expecting it, there are plenty of different types of RAT's but i will cover 2 for now
+
+!Signs you have a RAT!
+- PC running slow
+- PC overheating
+- PC turning on/off by its self
+- Your monitor turning on/off on its own even while in use
+- Your download speed seems slower than usual (be weary of this, because there can be many factors for why this is happening, even without a rat on your pc this can still happen)
+- You notice a program in Task Manager is using lots of resources than usual
+- When your computer is in sleep mode and the fan is still spinning quite high
+
+What to do to find out you have a RAT:
+There are many things you can do, here are a few
+    - Run Malwarebytes #1 thing you should do first!
+    - Reset your firewall settings in windows
+
+1. open the command prompt (Windows Key + R) then type "CMD")
+type this in the command prompt
+   cd %APPDATA%
+   dir /A-D /B
+Now after you type the command above! see if any of these pop up
+   
+    Quote:yourpcname.dat
+    SQlite3.dll
+    svchost.exe (Possibly)
+    ArbiAuth.ini
+    GHSettings.ini
+    wklnhst.dat
+
+
+if any of those pop up, then you possibly have a RAT, what do i do now you ask?
+try this!
+
+Open Task Manager (Click More Details on bottom left)
+Look for any programs that are not windows related, and look absolutely through the whole Task Manager, if you see anything that is weird or you don't recognize, type the name of the program into google and see what comes up. If you find out it is a RAT, ! DO NOT END TASK !
+Right click the program, Click "Open file location", try to delete all of the files in there, if you are sure its a rat!
+
+
+How to kill a RAT that would let you delete the files
+Go to task manager right click the top at status and check PID
+find the program again
+write down that PID number
+
+Right Click windows in bottom left, run Command Prompt Admin, type "taskkill /pid pidhere"
+type the number you wrote in the spot where i put "pidhere"
+
+then run back to the file location of the RAT and delete the files ASAP
+
+Run malwareBytes one more time, and maybe a windows defender scan
+
+the RAT should be gone after that :D
+
+
+
+
+Some good links on privacy to check out:
+(good guide to securing the services you use)
+ https://docs.google.com/document/d/1ud1I...UPYA8/edit
+
+(good alternatives to the scummy big companies services you most likely use!)
+ https://www.privacytools.io/
+
+(good info on what to do when Doxed)
+ https://paranoidsbible.tumblr.com/post/1...o-if-doxed
+
+(more info on removing RAT's/Trojans)
+https://removecomputerthreat.weebly.com/...r-computer
